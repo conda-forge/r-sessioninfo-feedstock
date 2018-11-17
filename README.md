@@ -14,9 +14,8 @@ Summary: Query and print information about the current R session. It is similar 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-sessioninfo-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-sessioninfo-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-sessioninfo-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-sessioninfo-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-sessioninfo-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-sessioninfo-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-sessioninfo-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-sessioninfo-feedstock)
 
 Current release info
 ====================

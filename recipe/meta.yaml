@@ -1,24 +1,21 @@
-{% set version = "1.1.0" %}
-
+{% set version = '1.1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
-{% set cran_mirror = 'https://cran.r-project.org' %}
 
 package:
   name: r-sessioninfo
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: sessioninfo_1.0.0.tar.gz
   url:
-    - {{ cran_mirror }}/src/contrib/sessioninfo_1.0.0.tar.gz
-    - {{ cran_mirror }}/src/contrib/Archive/sessioninfo/sessioninfo_1.0.0.tar.gz
-  sha256: b30d2426da82951bd9a88b921a03180ba753862dd6814327fb52b230f7a2e301
+    - {{ cran_mirror }}/src/contrib/sessioninfo_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/sessioninfo/sessioninfo_{{ version }}.tar.gz
+  sha256: 166b04678448a7decd50f24afabe5e2ad613e3c55b180ef6e8dd7a870a1dae48
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 1000
-
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,12 +25,11 @@ requirements:
 
   host:
     - r-base
-    - r-clisymbols
+    - r-cli
     - r-withr
-
   run:
     - r-base
-    - r-clisymbols
+    - r-cli
     - r-withr
 
 test:
@@ -57,3 +53,23 @@ extra:
     - jdblischak
     - cbrueffer
     - roryk
+    - dbast
+
+# Package: sessioninfo
+# Title: R Session Information
+# Version: 1.1.1
+# Author: Gabor Csardi, R core, Hadley Wickham, Winston Chang, Robert M Flight, Kirill Muller, Jim Hester
+# Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
+# Description: Query and print information about the current R session. It is similar to 'utils::sessionInfo()', but includes more information about packages, and where they were installed from.
+# License: GPL-2
+# LazyData: true
+# URL: https://github.com/r-lib/sessioninfo#readme
+# BugReports: https://github.com/r-lib/sessioninfo/issues
+# RoxygenNote: 6.1.0
+# Suggests: callr, covr, mockery, testthat
+# Imports: cli, tools, utils, withr
+# Encoding: UTF-8
+# NeedsCompilation: no
+# Packaged: 2018-11-05 16:32:45 UTC; gaborcsardi
+# Repository: CRAN
+# Date/Publication: 2018-11-05 17:20:02 UTC

@@ -1,11 +1,11 @@
-About r-sessioninfo
-===================
+About r-sessioninfo-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sessioninfo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/r-lib/sessioninfo#readme
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sessioninfo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Query and print information about the current R session. It is similar to 'utils::sessionInfo()', but includes more information about packages, and where they were installed from.
 
